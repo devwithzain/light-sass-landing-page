@@ -1,3 +1,8 @@
+import { Hero } from "@/components";
 export default function App() {
-	return <div>App</div>;
+	return (
+		<>
+			<Hero />
+		</>
+	);
 }
