@@ -1,4 +1,4 @@
-import { avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8, avatar9 } from "@/public";
+import { acme, apex, avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8, avatar9, celestial, echo, instagram, linkedin, pin, pulse, quantum, x, youtube } from "@/public";
 
 /**
  * An array of navigation items, each with an id, title, and href.
@@ -150,5 +150,93 @@ export const testimonials = [
       src: avatar8,
       name: "Sam Dawson",
       username: "@dawsontechtips",
+   },
+];
+
+export const logoMarqueeItems = [
+   {
+      id: 1,
+      src: apex
+   },
+   {
+      id: 2,
+      src: acme
+   },
+   {
+      id: 3,
+      src: celestial
+   },
+   {
+      id: 4,
+      src: echo
+   },
+   {
+      id: 5,
+      src: pulse
+   },
+   {
+      id: 6,
+      src: quantum
+   }
+];
+
+export const footerItems = [
+   {
+      id: 1,
+      title: 'About',
+      href: '/about'
+   },
+   {
+      id: 2,
+      title: 'Features',
+      href: '/features'
+   },
+   {
+      id: 3,
+      title: 'Customers',
+      href: '/customers'
+   },
+   {
+      id: 4,
+      title: 'Pricing',
+      href: '/pricing'
+   },
+   {
+      id: 5,
+      title: 'Help',
+      href: '/help'
+   },
+   {
+      id: 6,
+      title: 'Careers',
+      href: '/careers'
+   }
+];
+
+export const footerSocialsItems = [
+   {
+      id: 1,
+      src: instagram,
+      href: "/"
+   },
+   {
+      id: 2,
+      src: linkedin,
+      href: "/"
+   },
+   {
+      id: 3,
+      src: pin,
+      href: "/"
+   },
+   {
+      id: 4,
+      src: x,
+      href: "/"
+   },
+   {
+      id: 5,
+      src: youtube,
+      href: "/"
    },
 ];

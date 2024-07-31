@@ -5,7 +5,13 @@
 body {
 	font-family: DMSans;
 	background-color: #eaeefe;
+	overflow-x: hidden;
 }
+
+body::-webkit-scrollbar {
+	width: 0;
+}
+
 @font-face {
 	src: url("../font/DMSans.ttf");
 	font-family: DMSans;
