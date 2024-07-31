@@ -7,7 +7,7 @@ export default function Hero() {
 	return (
 		<div className="w-full h-screen bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_80%)]">
 			<Navbar />
-			<div className="w-full h-full items-center flex gap-4 justify-between pl-20">
+			<div className="w-full h-full items-center flex gap-4 justify-between pl-20 overflow-hidden">
 				<div className="flex-1 flex flex-col gap-6 relative">
 					<div>
 						<button className="w-fit py-2 px-3 rounded-full border border-[#2222221A] text-black font-dmSans text-sm font-medium leading-5 tracking-[-0.02188rem]">
@@ -47,7 +47,7 @@ export default function Hero() {
 							</div>
 						</div>
 					</div>
-					<div className="absolute -right-36 -top-14">
+					<div className="absolute -right-24 -top-14">
 						<Image
 							src={cylinder}
 							alt="cylinder-hero-img"
@@ -64,7 +64,7 @@ export default function Hero() {
 						height={400}
 						className="w-[70%] h-auto object-cover"
 					/>
-					<div className="absolute right-0 bottom-5">
+					<div className="absolute right-5 bottom-10 rotate-[30deg]">
 						<Image
 							src={noodle}
 							alt="noodle-hero-img"

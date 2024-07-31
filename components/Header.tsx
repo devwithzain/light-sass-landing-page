@@ -26,7 +26,7 @@ export default function Navbar() {
 					/>
 				</div>
 			</div>
-			<div className="w-full flex items-center justify-between gap-2 px-20 py-5 ">
+			<div className="w-full flex items-center justify-between gap-2 px-20 py-3">
 				<div>
 					<Image
 						src={logo}
