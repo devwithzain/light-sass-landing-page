@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "@svgr/webpack": "^8.1.0",
     "framer-motion": "^11.3.19",
     "next": "14.2.5",
