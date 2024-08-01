@@ -1,5 +1,6 @@
 export { default as Navbar } from './Header';
 export { default as Button } from './Button';
+export { default as Heading } from './Heading';
 export { default as Hero } from './Hero';
 export { default as LogoTicker } from './LogoTicker';
 export { default as ProductShowcase } from './ProductShowcase';

@@ -28,3 +28,6 @@ export { default as star } from './star.png';
 export { default as productImage } from './product-image.png';
 export { default as pyramid } from './pyramid.png';
 export { default as tube } from './tube.png';
+export { default as check } from './check.svg';
+export { default as checkwhite } from './checkwhite.svg';
+export { default as arrowRightWhite } from './arrow-right-white.svg';

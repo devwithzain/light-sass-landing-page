@@ -1,4 +1,5 @@
 import { acme, apex, avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8, avatar9, celestial, echo, instagram, linkedin, pin, pulse, quantum, x, youtube } from "@/public";
+import { features } from "process";
 
 /**
  * An array of navigation items, each with an id, title, and href.
@@ -238,5 +239,120 @@ export const footerSocialsItems = [
       id: 5,
       src: youtube,
       href: "/"
+   },
+];
+
+export const pricingItems = [
+   {
+      id: 1,
+      title: 'Free',
+      price: 0,
+      btn: "Get for free",
+      features: [
+         {
+            id: 1,
+            feature: "Up to 5 project members",
+         },
+         {
+            id: 2,
+            feature: "Unlimited tasks and projects",
+         },
+         {
+            id: 3,
+            feature: "2GB storage",
+         },
+         {
+            id: 4,
+            feature: "Integrations",
+         },
+         {
+            id: 5,
+            feature: "Basic support",
+         },
+      ]
+   },
+   {
+      id: 2,
+      title: 'Pro',
+      price: 9,
+      btn: "Sign up now",
+      features: [
+         {
+            id: 1,
+            feature: "Up to 50 project members",
+         },
+         {
+            id: 2,
+            feature: "Unlimited tasks and projects",
+         },
+         {
+            id: 3,
+            feature: "50GB storage",
+         },
+         {
+            id: 4,
+            feature: "Integrations",
+         },
+         {
+            id: 5,
+            feature: "Priority support",
+         },
+         {
+            id: 6,
+            feature: "Advanced support",
+         },
+         {
+            id: 7,
+            feature: "Export support",
+         },
+      ]
+   },
+   {
+      id: 3,
+      title: 'Business',
+      price: 19,
+      btn: "Sign up now",
+      features: [
+         {
+            id: 1,
+            feature: "Up to 5 project members",
+         },
+         {
+            id: 2,
+            feature: "Unlimited tasks and projects",
+         },
+         {
+            id: 3,
+            feature: "200GB storage",
+         },
+         {
+            id: 4,
+            feature: "Integrations",
+         },
+         {
+            id: 5,
+            feature: "Dedicated account manager",
+         },
+         {
+            id: 6,
+            feature: "Custom fields",
+         },
+         {
+            id: 7,
+            feature: "Advanced analytics",
+         },
+         {
+            id: 8,
+            feature: "Export capabilities",
+         },
+         {
+            id: 9,
+            feature: "API access",
+         },
+         {
+            id: 10,
+            feature: "Advanced security features",
+         },
+      ]
    },
 ];

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components";
-import { ArrowRight, logo } from "@/public";
+import { ArrowRight, arrowRightWhite, logo } from "@/public";
 import { navigationItems } from "@/constants";
 
 export default function Navbar() {
@@ -18,8 +18,8 @@ export default function Navbar() {
 						Get started for free
 					</button>
 					<Image
-						src={ArrowRight}
-						alt="ArrowRight"
+						src={arrowRightWhite}
+						alt="arrowRightWhite"
 						width={20}
 						height={20}
 						className="text-white"
