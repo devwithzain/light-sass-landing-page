@@ -92,7 +92,7 @@ export const testimonials = [
    {
       id: 1,
       text: "Its user-friendly interface and robust features support our diverse needs.",
-      imageSrc: avatar9,
+      src: avatar9,
       name: "Casey Harper",
       username: "@casey09",
    },

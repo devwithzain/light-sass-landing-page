@@ -8,6 +8,7 @@ import {
 	LogoTicker,
 	Pricing,
 	ProductShowcase,
+	Testimonials,
 } from "@/components";
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
 			<LogoTicker />
 			<ProductShowcase />
 			<Pricing />
+			<Testimonials />
 			<CTA />
 			<Footer />
 		</>

@@ -4,7 +4,7 @@ import Button from "./Button";
 
 export default function CallToAction() {
 	return (
-		<div className="w-full py-10 relative bg-gradient-to-b from-white/0 to-[#D2DCFF]">
+		<div className="w-full py-10 relative bg-gradient-to-b from-white to-[#d2dcff]">
 			<div className="w-full flex items-center gap-5">
 				<div className="">
 					<Image

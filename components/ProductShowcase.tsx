@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ProductShowcase() {
 	return (
-		<div className="w-full px-20 py-10 bg-gradient-to-b from-white/0 to-[#D2DCFF]">
+		<div className="w-full px-20 py-10 bg-gradient-to-b from-white to-[#d2dcff]">
 			<div className="w-full flex flex-col gap-10">
 				<div className="w-full flex items-center flex-col gap-3">
 					<div>
