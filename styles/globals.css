@@ -16,3 +16,15 @@ body::-webkit-scrollbar {
 	src: url("../font/DMSans.ttf");
 	font-family: DMSans;
 }
+
+@layer utilities {
+	.heading {
+		@apply text-[72px] lg:text-[60px] md:text-[50px] sm:text-[40px] xm:text-[40px];
+	}
+	.paragraph {
+		@apply text-[20px] lg:text-[18px] md:text-[17px] sm:text-[16px] xm:text-[16px];
+	}
+	.padding-x {
+		@apply px-[100px] md:px-[30px] sm:px-[20px] xm:px-[20px];
+	}
+}
