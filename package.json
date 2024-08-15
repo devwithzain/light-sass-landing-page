@@ -14,7 +14,8 @@
     "framer-motion": "^11.3.19",
     "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-intersection-observer": "^9.13.0"
   },
   "devDependencies": {
     "typescript": "^5",
