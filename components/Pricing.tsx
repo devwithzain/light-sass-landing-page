@@ -16,7 +16,7 @@ export default function Pricing() {
 						/>
 					</div>
 					<div>
-						<p className="text-[#010D3E] text-center font-dmSans text-xl font-normal leading-7">
+						<p className="text-[#010D3E] text-center font-dmSans text-xl font-normal leading-tight">
 							Free forever. Upgrade for unlimited tasks, better <br /> security,
 							and exclusive features.
 						</p>
@@ -31,14 +31,14 @@ export default function Pricing() {
 							key={item.id}>
 							<div className="w-full flex flex-col gap-10">
 								<h1
-									className={`text-[#00000080] text-[30px] font-bold leading-7 tracking-[-0.9px] ${
+									className={`text-[#00000080] text-[30px] font-bold leading-tight tracking-[-0.9px] ${
 										item.id == 2 ? "text-[#FFFFFF80]" : "text-[#00000080] "
 									}`}>
 									{item.title}
 								</h1>
 								<div className="flex gap-3">
 									<h1
-										className={`text-black font-dmSans text-[40px] font-bold leading-9 tracking-[-0.045em] ${
+										className={`text-black font-dmSans text-[40px] font-bold leading-tight tracking-[-0.045em] ${
 											item.id == 2 ? "text-white" : "text-black "
 										}`}>
 										${item.price}
@@ -82,7 +82,7 @@ export default function Pricing() {
 											/>
 										)}
 										<p
-											className={`leading-5 text-[16px] ${
+											className={`leading-tight text-[16px] ${
 												item.id == 2 ? "text-white" : "text-black"
 											}`}>
 											{feature.feature}

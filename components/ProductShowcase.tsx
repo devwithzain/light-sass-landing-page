@@ -1,49 +1,96 @@
-import { productImage, pyramid, tube } from "@/public";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { TextMask } from "@/animations";
+import { productImage, pyramid, tube } from "@/public";
 
 export default function ProductShowcase() {
+	const phares1 = ["A more effective way", "to track progress"];
+	const phares2 = [
+		"Celebrate the joy of accomplishment with an app",
+		"designed to track your progress and motivate your",
+		"efforts.",
+	];
+	const phares3 = [
+		"Celebrate the joy of accomplishment with an app designed to track your progress and motivate your efforts.",
+	];
 	return (
-		<div className="w-full px-20 py-10 bg-gradient-to-b from-white to-[#d2dcff]">
+		<div className="w-full padding-x py-10 bg-gradient-to-b from-white to-[#d2dcff]">
 			<div className="w-full flex flex-col gap-10">
 				<div className="w-full flex items-center flex-col gap-3">
-					<div>
-						<button className="w-fit py-2 px-3 rounded-full border border-[#2222221A] text-black font-dmSans text-sm font-medium leading-5 tracking-[-0.02188rem]">
+					<motion.div
+						initial={{ opacity: 0, scale: 0 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{
+							duration: 1,
+							type: "spring",
+						}}
+						viewport={{ once: true }}>
+						<button className="w-fit py-2 px-3 rounded-full border border-[#2222221A] text-black font-dmSans text-sm font-medium leading-tight tracking-[-0.02188rem]">
 							Boost your productivity
 						</button>
-					</div>
+					</motion.div>
 					<div>
-						<h1 className="text-[54px] text-center font-bold leading-[65px] tracking-[-2.7px] bg-gradient-to-b from-black to-[#001E7F] text-transparent bg-clip-text">
-							A more effective way <br /> to track progress
+						<h1 className="heading text-center font-bold leading-tight tracking-[-2.7px] bg-gradient-to-b from-black to-[#001E7F] bg-clip-text">
+							<TextMask>{phares1}</TextMask>
 						</h1>
 					</div>
 					<div>
-						<p className="text-[#010D3E] text-center font-dmSans text-xl font-normal leading-7">
-							Celebrate the joy of accomplishment with an app <br /> designed to
-							track your progress and motivate your <br /> efforts.
-						</p>
+						<h1 className="text-[#010D3E] font-dmSans paragraph font-normal leading-tight text-center block xm:hidden sm:hidden">
+							<TextMask>{phares2}</TextMask>
+						</h1>
+						<h1 className="text-[#010D3E] font-dmSans paragraph font-normal leading-tight text-center hidden xm:block sm:block">
+							<TextMask>{phares3}</TextMask>
+						</h1>
 					</div>
 				</div>
 				<div className="relative">
-					<Image
-						src={productImage}
-						alt="productImage"
-					/>
-					<div className="absolute -left-40 bottom-20">
+					<motion.div
+						initial={{ opacity: 0, scale: 0 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{
+							duration: 1,
+							type: "spring",
+						}}
+						viewport={{ once: true }}
+						className="w-full flex items-center justify-center">
+						<Image
+							src={productImage}
+							alt="productImage"
+							className="w-full h-full object-cover"
+						/>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0, scale: 0 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{
+							duration: 1,
+							type: "spring",
+						}}
+						viewport={{ once: true }}
+						className="absolute -left-40 bottom-20 xm:hidden sm:hidden">
 						<Image
 							src={tube}
 							alt="tube-hero-img"
 							width={250}
 							height={250}
 						/>
-					</div>
-					<div className="absolute -right-32 -top-20">
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0, scale: 0 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{
+							duration: 1,
+							type: "spring",
+						}}
+						viewport={{ once: true }}
+						className="absolute -right-32 -top-20 xm:hidden sm:hidden">
 						<Image
 							src={pyramid}
 							alt="pyramid-hero-img"
 							width={250}
 							height={250}
 						/>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</div>

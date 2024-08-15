@@ -1,11 +1,11 @@
-import { footerItems, footerSocialsItems } from "@/constants";
-import { logo } from "@/public";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { logo } from "@/public";
+import { footerItems, footerSocialsItems } from "@/constants";
 
 export default function Footer() {
 	return (
-		<div className="w-full bg-black py-10 px-20">
+		<div className="w-full bg-black py-10 padding-x">
 			<div className="w-full flex items-center justify-center flex-col gap-7">
 				<div>
 					<Image
@@ -15,12 +15,12 @@ export default function Footer() {
 						height={40}
 					/>
 				</div>
-				<div className="flex items-center gap-4">
+				<div className="flex items-center gap-4  xm:flex-col sm:flex-col">
 					{footerItems.map((item) => (
 						<Link
 							href={item.href}
 							key={item.id}
-							className="text-md font-normal leading-6 text-[#BCBCBC]">
+							className="paragraph font-normal leading-tight text-[#BCBCBC]">
 							{item.title}
 						</Link>
 					))}
@@ -40,7 +40,7 @@ export default function Footer() {
 					))}
 				</div>
 				<div className="flex items-center">
-					<p className="text-[#BCBCBC] text-md font-normal">
+					<p className="text-[#BCBCBC] paragraph font-normal">
 						© 2024 Your Company, Inc. All rights reserved.
 					</p>
 				</div>
