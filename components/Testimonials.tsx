@@ -5,7 +5,7 @@ import { testimonials } from "@/constants";
 
 export default function Testimonials() {
 	return (
-		<div className="w-full flex flex-col items-center px-20 py-10 gap-20 bg-white">
+		<div className="w-full flex flex-col items-center padding-x py-10 gap-20 bg-white xm:gap-10 sm:gap-10">
 			<div className="flex flex-col items-center gap-5">
 				<div>
 					<button className="w-fit py-2 px-3 rounded-full border border-[#2222221A] text-black font-dmSans text-sm font-medium leading-tight tracking-[-0.02188rem]">
@@ -13,19 +13,21 @@ export default function Testimonials() {
 					</button>
 				</div>
 				<div>
-					<h1 className="text-[4.5rem] font-bold leading-tight tracking-[-0.225rem] bg-gradient-to-b from-black to-[#001E7F] text-transparent bg-clip-text">
-						What our users say
-					</h1>
+					<Heading
+						classname="text-[60px] xm:text-center sm:text-center"
+						title="What our users say"
+					/>
 				</div>
 				<div>
 					<p className="text-[#010D3E] font-dmSans text-xl font-normal leading-tight text-center">
-						From intuitive design to powerful features, our app has <br />
+						From intuitive design to powerful features, our app has{" "}
+						<br className="xm:hidden sm:hidden" />
 						become an essential tool for users around the world.
 					</p>
 				</div>
 			</div>
-			<div className="w-[80%] flex gap-5">
-				<div className="w-1/3 flex flex-col gap-5">
+			<div className="w-[80%] flex gap-5 xm:flex-col sm:flex-col xm:w-full sm:w-full">
+				<div className="w-1/3 flex flex-col gap-5 xm:w-full sm:w-full">
 					{testimonials.slice(0, 3).map((item) => (
 						<div
 							className="flex flex-col gap-5"
@@ -54,7 +56,7 @@ export default function Testimonials() {
 						</div>
 					))}
 				</div>
-				<div className="w-1/3 flex flex-col gap-5">
+				<div className="w-1/3 flex flex-col gap-5 xm:w-full sm:w-full">
 					{testimonials.slice(3, 6).map((item) => (
 						<div
 							className="flex flex-col gap-5"
@@ -81,7 +83,7 @@ export default function Testimonials() {
 						</div>
 					))}
 				</div>
-				<div className="w-1/3 flex flex-col gap-5">
+				<div className="w-1/3 flex flex-col gap-5 xm:w-full sm:w-full">
 					{testimonials.slice(6).map((item) => (
 						<div
 							className="flex flex-col gap-5"

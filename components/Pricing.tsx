@@ -6,8 +6,8 @@ import { check, checkwhite } from "@/public";
 
 export default function Pricing() {
 	return (
-		<div className="w-full px-20 py-20 bg-white">
-			<div className="w-full flex flex-col gap-20">
+		<div className="w-full padding-x py-20 bg-white xm:py-10 sm:py-10">
+			<div className="w-full flex flex-col gap-20 xm:gap-10 sm:gap-10">
 				<div className="w-full flex items-center flex-col gap-3">
 					<div>
 						<Heading
@@ -17,15 +17,16 @@ export default function Pricing() {
 					</div>
 					<div>
 						<p className="text-[#010D3E] text-center font-dmSans text-xl font-normal leading-tight">
-							Free forever. Upgrade for unlimited tasks, better <br /> security,
-							and exclusive features.
+							Free forever. Upgrade for unlimited tasks, better{" "}
+							<br className="xm:hidden sm:hidden" /> security, and exclusive
+							features.
 						</p>
 					</div>
 				</div>
-				<div className="w-full flex justify-center items-end gap-10">
+				<div className="w-full flex justify-center items-end gap-10 xm:flex-col sm:flex-col">
 					{pricingItems.map((item) => (
 						<div
-							className={`w-full flex flex-col gap-10 rounded-3xl border border-[#F1F1F1] shadow-[0px_7px_14px_0px_#EAEAEA] p-14 ${
+							className={`w-full flex flex-col gap-10 rounded-3xl border border-[#F1F1F1] shadow-[0px_7px_14px_0px_#EAEAEA] p-14 xm:p-8 sm:p-8 ${
 								item.id == 2 ? "bg-black text-white " : "bg-white text-black"
 							}`}
 							key={item.id}>

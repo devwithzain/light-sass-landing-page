@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components";
-import { ArrowRight, arrowRightWhite, logo } from "@/public";
+import { arrowRightWhite, logo } from "@/public";
 import { navigationItems } from "@/constants";
+import { MobileMenu } from "@/animations";
 
 export default function Navbar() {
 	return (
@@ -26,7 +27,7 @@ export default function Navbar() {
 					/>
 				</div>
 			</div>
-			<div className="w-full flex items-center justify-between gap-2 padding-x py-3">
+			<div className="w-full flex items-center justify-between gap-2 padding-x py-3 xm:hidden sm:hidden">
 				<div>
 					<Image
 						src={logo}
@@ -49,6 +50,9 @@ export default function Navbar() {
 						title="Get for free"
 					/>
 				</div>
+			</div>
+			<div className="hidden xm:block sm:block">
+				<MobileMenu />
 			</div>
 		</div>
 	);
