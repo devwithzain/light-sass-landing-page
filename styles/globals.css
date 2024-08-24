@@ -25,6 +25,6 @@ body::-webkit-scrollbar {
 		@apply text-[20px] lg:text-[18px] md:text-[17px] sm:text-[16px] xm:text-[16px];
 	}
 	.padding-x {
-		@apply px-[100px] md:px-[30px] sm:px-[20px] xm:px-[20px];
+		@apply px-[70px] md:px-[30px] sm:px-[20px] xm:px-[20px];
 	}
 }
