@@ -1,6 +1,44 @@
 export const navVariants = {
-   hidden: { y: "-100%" },
-   vissible: { y: 0, transition: { ease: [0.76, 0, 0.24, 1], duration: 1.2 }, }
+   initial: {
+      y: "-100%", transition: { ease: "easeInOut", duration: 1 }
+   },
+   enter: { y: 0, transition: { ease: "easeInOut", duration: 1 } },
+   hidden: { y: "-100%", transition: { ease: "easeInOut", duration: 0.5 } },
+   vissible: { y: 0, transition: { ease: "easeInOut", duration: 0.5 }, }
+};
+
+export const textAnimation = {
+   initial: {
+      opacity: 0, y: "100%", transition: {
+         duration: 0.8,
+         delay: 0.5,
+         ease: [0.33, 1, 0.68, 1],
+      },
+   },
+   enter: {
+      opacity: 1, y: 0,
+      transition: {
+         duration: 0.8,
+         delay: 0.5,
+         ease: [0.33, 1, 0.68, 1],
+      },
+   },
+};
+
+export const imageAnimation = {
+   initial: {
+      opacity: 0, scale: 0, transition: {
+         duration: 0.8,
+         ease: [0.33, 1, 0.68, 1],
+      },
+   },
+   enter: {
+      opacity: 1, scale: 1,
+      transition: {
+         duration: 0.8,
+         ease: [0.33, 1, 0.68, 1],
+      },
+   },
 };
 
 export const animation = {
