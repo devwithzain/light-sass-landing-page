@@ -18,7 +18,7 @@ export default function Navbar() {
 			animate="enter"
 			exit="exit"
 			className="h-screen bg-[#292929] fixed right-0 top-0 text-white">
-			<div className="box-border h-full py-[30px] px-[60px]  sm:px-[40px] xm:px-[40px] flex flex-col justify-between">
+			<div className="box-border h-full z-[999] py-[30px] px-[60px]  sm:px-[40px] xm:px-[40px] flex flex-col justify-between">
 				<div
 					onMouseLeave={() => {
 						setSelectedIndicator(pathname);

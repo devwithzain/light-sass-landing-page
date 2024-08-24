@@ -1,10 +1,11 @@
 "use client";
 import Navbar from "./Navbar";
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-import { AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { logo } from "@/public";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
+import { navVariants } from "@/motion";
 
 export default function LeftSideHome() {
 	const pathname = usePathname();
@@ -16,13 +17,18 @@ export default function LeftSideHome() {
 
 	return (
 		<>
-			<div className="w-full flex items-center justify-between gap-5 padding-x pt-[8px]">
+			<motion.div
+				variants={navVariants}
+				initial="initial"
+				whileInView="enter"
+				viewport={{ once: true }}
+				className="w-full flex items-center justify-between gap-5 padding-x py-[12px] z-[999] backdrop-blur-sm">
 				<div>
 					<Image
 						src={logo}
 						alt="logo"
-						width={50}
-						height={50}
+						width={40}
+						height={40}
 					/>
 				</div>
 				<div className="z-10">
@@ -30,7 +36,7 @@ export default function LeftSideHome() {
 						onClick={() => {
 							setIsActive(!isActive);
 						}}
-						className="w-[50px] h-[50px] rounded-full bg-black cursor-pointer flex items-center justify-center relative">
+						className="w-[40px] h-[40px] rounded-full bg-black cursor-pointer flex items-center justify-center relative">
 						<div
 							className={`w-[50%] h-[2px] bg-white absolute ${
 								!isActive && "top-[45%]"
@@ -51,7 +57,7 @@ export default function LeftSideHome() {
 						/>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 			<AnimatePresence mode="wait">{isActive && <Navbar />}</AnimatePresence>
 		</>
 	);
