@@ -11,7 +11,7 @@ export type TlogoMarqueeProps = {
 };
 
 export type TheadingProps = {
-   title: string;
+   title: string[];
    classname: string;
 };
 

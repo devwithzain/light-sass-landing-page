@@ -33,13 +33,6 @@ export const navigationItems = [
    }
 ];
 
-// TextMask Constant
-
-export const phares1 = ["Pathway to ", "productivity"];
-export const phares2 = [
-   "Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes.",
-];
-
 export const pricingTiers = [
    {
       id: 1,
