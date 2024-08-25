@@ -4,7 +4,7 @@ import { logoMarqueeItems } from "@/constants";
 
 export default function LogoTicker() {
 	return (
-		<div>
+		<div className="w-full [mask-image:linear-gradient(to_left,transparent,black_25%,black_75%,transparent)]">
 			<LogoMarquee baseVelocity={1.5}>
 				{logoMarqueeItems.map((item) => (
 					<div

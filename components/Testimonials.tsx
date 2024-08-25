@@ -36,22 +36,22 @@ export default function Testimonials() {
 					/>
 				</div>
 			</div>
-			<motion.div className="w-[80%] flex gap-5 xm:flex-col sm:flex-col xm:w-full sm:w-full overflow-hidden h-[600px]">
+			<motion.div className="w-full flex gap-5 xm:flex-col sm:flex-col xm:w-full py-10 sm:w-full overflow-hidden h-[750px] [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] mt-10">
 				<motion.div
-					animate={{ y: "-100%" }}
+					animate={{ y: "-50%" }}
 					transition={{
 						repeat: Infinity,
 						repeatType: "loop",
 						ease: "linear",
 						duration: 13,
 					}}
-					className="w-1/3 flex flex-col gap-5 xm:w-full sm:w-full pb-5">
+					className="w-1/3 flex flex-col h-fit xm:w-full sm:w-full">
 					{[...testimonials.slice(0, 3), ...testimonials.slice(0, 3)].map(
 						(item) => (
 							<div
 								className="flex flex-col gap-5"
 								key={item.id}>
-								<div className="p-12 shadow border border-[#222222]/10 rounded-[30px] bg-white flex flex-col gap-5">
+								<div className="p-10 mb-5 shadow border border-[#222222]/10 rounded-[30px] bg-white flex flex-col gap-5">
 									<p className="text-[#010D3E] font-dmSans text-xl font-normal leading-tight">
 										{item.text}
 									</p>
@@ -59,8 +59,8 @@ export default function Testimonials() {
 										<Image
 											src={item.src}
 											alt="asd"
-											width={80}
-											height={80}
+											width={60}
+											height={60}
 										/>
 										<div className="flex flex-col">
 											<h1 className="text-[#010D3E] font-dmSans text-xl font-normal leading-tight">
@@ -77,8 +77,8 @@ export default function Testimonials() {
 					)}
 				</motion.div>
 				<motion.div
-					className="w-1/3 flex flex-col gap-5 xm:w-full sm:w-full"
-					animate={{ y: "-100%" }}
+					className="w-1/3 flex flex-col h-fit xm:hidden sm:hidden"
+					animate={{ y: "-50%" }}
 					transition={{
 						repeat: Infinity,
 						repeatType: "loop",
@@ -90,7 +90,7 @@ export default function Testimonials() {
 							<div
 								className="flex flex-col gap-5"
 								key={item.id}>
-								<div className="p-12 shadow border border-[#222222]/10 rounded-[30px] bg-white flex flex-col gap-5">
+								<div className="p-10 mb-5 shadow border border-[#222222]/10 rounded-[30px] bg-white flex flex-col gap-5">
 									<p className="text-[#010D3E] font-dmSans text-xl font-normal leading-tight">
 										{item.text}
 									</p>
@@ -98,6 +98,8 @@ export default function Testimonials() {
 										<Image
 											src={item.src}
 											alt="asd"
+											width={60}
+											height={60}
 										/>
 										<div className="flex flex-col">
 											<h1 className="text-[#010D3E] font-dmSans text-xl font-normal leading-tight">
@@ -114,8 +116,8 @@ export default function Testimonials() {
 					)}
 				</motion.div>
 				<motion.div
-					className="w-1/3 flex flex-col gap-5 xm:w-full sm:w-full"
-					animate={{ y: "-100%" }}
+					className="w-1/3 flex flex-col h-fit xm:hidden sm:hidden"
+					animate={{ y: "-50%" }}
 					transition={{
 						repeat: Infinity,
 						repeatType: "loop",
@@ -126,7 +128,7 @@ export default function Testimonials() {
 						<div
 							className="flex flex-col gap-5"
 							key={item.id}>
-							<div className="p-12 shadow border border-[#222222]/10 rounded-[30px] bg-white flex flex-col gap-5">
+							<div className="p-10 mb-5 shadow border border-[#222222]/10 rounded-[30px] bg-white flex flex-col gap-5">
 								<p className="text-[#010D3E] font-dmSans text-xl font-normal leading-tight">
 									{item.text}
 								</p>
@@ -134,6 +136,8 @@ export default function Testimonials() {
 									<Image
 										src={item.src}
 										alt="asd"
+										width={60}
+										height={60}
 									/>
 									<div className="flex flex-col">
 										<h1 className="text-[#010D3E] font-dmSans text-xl font-normal leading-tight">

@@ -44,7 +44,7 @@ export default function LogoMarquee({
 	});
 
 	return (
-		<div className="overflow-hidden flex whitespace-nowrap flex-wrap my-[30px]">
+		<div className="bg-white overflow-hidden flex whitespace-nowrap flex-wrap py-6">
 			<motion.div
 				className="flex whitespace-nowrap items-center flex-nowrap"
 				style={{ x }}>

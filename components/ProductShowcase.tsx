@@ -1,9 +1,18 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { TextMask } from "@/animations";
 import { productImage, pyramid, tube } from "@/public";
+import { useRef } from "react";
 
 export default function ProductShowcase() {
+	const container = useRef(null);
+
+	const { scrollYProgress } = useScroll({
+		target: container,
+		offset: ["start end", "end start"],
+	});
+	const cq = useTransform(scrollYProgress, [0, 1], [0, 200]);
+	const mq = useTransform(scrollYProgress, [0, 1], [0, -200]);
 	const phares1 = ["A more effective way", "to track progress"];
 	const phares2 = [
 		"Celebrate the joy of accomplishment with an app",
@@ -43,9 +52,11 @@ export default function ProductShowcase() {
 						</h1>
 					</div>
 				</div>
-				<div className="relative">
+				<div
+					className="relative"
+					ref={container}>
 					<motion.div
-						initial={{ opacity: 0, scale: 0 }}
+						initial={{ opacity: 0, scale: 0.5 }}
 						whileInView={{ opacity: 1, scale: 1 }}
 						transition={{
 							duration: 1,
@@ -67,7 +78,8 @@ export default function ProductShowcase() {
 							type: "spring",
 						}}
 						viewport={{ once: true }}
-						className="absolute -left-40 bottom-20 xm:hidden sm:hidden">
+						className="absolute -left-40 bottom-0 xm:hidden sm:hidden"
+						style={{ y: mq }}>
 						<Image
 							src={tube}
 							alt="tube-hero-img"
@@ -83,6 +95,7 @@ export default function ProductShowcase() {
 							type: "spring",
 						}}
 						viewport={{ once: true }}
+						style={{ y: cq }}
 						className="absolute -right-32 -top-20 xm:hidden sm:hidden">
 						<Image
 							src={pyramid}

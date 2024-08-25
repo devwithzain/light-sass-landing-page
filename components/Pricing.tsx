@@ -1,8 +1,8 @@
-import Button from "./Button";
 import Image from "next/image";
-import Heading from "./Heading";
+import { motion } from "framer-motion";
 import { pricingItems } from "@/constants";
 import { check, checkwhite } from "@/public";
+import { Heading, Button } from "@/components";
 
 export default function Pricing() {
 	const phares = ["Pricing"];
@@ -35,12 +35,34 @@ export default function Pricing() {
 							}`}
 							key={item.id}>
 							<div className="w-full flex flex-col gap-10">
-								<h1
-									className={`text-[#00000080] text-[30px] font-bold leading-tight tracking-[-0.9px] ${
-										item.id == 2 ? "text-[#FFFFFF80]" : "text-[#00000080] "
-									}`}>
-									{item.title}
-								</h1>
+								{item.id == 2 ? (
+									<div className="w-full flex items-center justify-between">
+										<h1
+											className={`text-[#00000080] text-[30px] font-bold leading-tight tracking-[-0.9px] ${
+												item.id == 2 ? "text-[#FFFFFF80]" : "text-[#00000080] "
+											}`}>
+											{item.title}
+										</h1>
+										<motion.span
+											className="border border-white/20 rounded-md text-sm px-3 py-1 bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DFF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF)] text-transparent bg-clip-text [background-size:200%]"
+											animate={{ backgroundPositionX: "-100%" }}
+											transition={{
+												duration: 1.5,
+												repeat: Infinity,
+												repeatType: "loop",
+												ease: "linear",
+											}}>
+											Popular
+										</motion.span>
+									</div>
+								) : (
+									<h1
+										className={`text-[#00000080] text-[30px] font-bold leading-tight tracking-[-0.9px] ${
+											item.id == 2 ? "text-[#FFFFFF80]" : "text-[#00000080] "
+										}`}>
+										{item.title}
+									</h1>
+								)}
 								<div className="flex gap-3">
 									<h1
 										className={`text-black font-dmSans text-[40px] font-bold leading-tight tracking-[-0.045em] ${
