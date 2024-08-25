@@ -22,7 +22,7 @@ export default function LeftSideHome() {
 				initial="initial"
 				whileInView="enter"
 				viewport={{ once: true }}
-				className="w-full flex items-center justify-between gap-5 padding-x py-[12px] z-[999] backdrop-blur-sm">
+				className="w-full flex items-center justify-between gap-5 padding-x py-[12px] relative z-[999] backdrop-blur-sm">
 				<div>
 					<Image
 						src={logo}

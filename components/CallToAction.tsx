@@ -1,8 +1,8 @@
-import Button from "./Button";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { TextMask } from "@/animations";
+import { Button, Heading } from "@/components";
 import { ArrowRight, spring, star } from "@/public";
+import { imageAnimation, textAnimation } from "@/motion";
 
 export default function CallToAction() {
 	const phares1 = ["Sign up for free today"];
@@ -18,45 +18,41 @@ export default function CallToAction() {
 		<div className="w-full padding-x py-10 relative bg-gradient-to-b from-white to-[#d2dcff]">
 			<div className="w-full flex items-center gap-5">
 				<motion.div
-					initial={{ opacity: 0, scale: 0 }}
-					whileInView={{ opacity: 1, scale: 1 }}
-					transition={{
-						duration: 1,
-						type: "spring",
-					}}
+					variants={imageAnimation}
+					initial="initial"
+					whileInView="enter"
 					viewport={{ once: true }}
 					className="xm:hidden sm:hidden">
 					<Image
 						src={star}
 						alt="star-hero-img"
-						width={800}
+						width={400}
 						height={400}
 					/>
 				</motion.div>
 				<div className="w-full flex items-center flex-col gap-3">
 					<div>
-						<h1 className="heading font-bold tracking-tight bg-gradient-to-b from-black to-[#001E7F] bg-clip-text xm:text-center sm:text-center leading-tight">
-							<TextMask>{phares1}</TextMask>
-						</h1>
+						<Heading
+							classname="heading font-bold xm:text-center sm:text-center"
+							title={phares1}
+						/>
 					</div>
 					<div>
-						<h1 className="text-[#010D3E] font-dmSans paragraph font-normal text-center block xm:hidden sm:hidden">
-							<TextMask>{phares2}</TextMask>
-						</h1>
-						<h1 className="text-[#010D3E] font-dmSans paragraph font-normal text-center hidden xm:block sm:block">
-							<TextMask>{phares3}</TextMask>
-						</h1>
+						<Heading
+							classname="paragraph font-normal text-center block xm:hidden sm:hidden"
+							title={phares2}
+						/>
+						<Heading
+							classname="paragraph font-normal text-center hidden xm:block sm:block"
+							title={phares3}
+						/>
 					</div>
 					<motion.div
-						initial={{ opacity: 0, scale: 0 }}
-						whileInView={{ opacity: 1, scale: 1 }}
-						transition={{
-							duration: 1,
-							delay: 0.5,
-							type: "spring",
-						}}
+						variants={textAnimation}
+						initial="initial"
+						whileInView="enter"
 						viewport={{ once: true }}
-						className="flex gap-4 items-center mt-3">
+						className="flex gap-4 items-center mt-3 overflow-hidden">
 						<Button
 							className="text-white bg-black py-2 px-4"
 							title="Get for free"
@@ -78,17 +74,14 @@ export default function CallToAction() {
 				</div>
 				<motion.div
 					className="xm:hidden sm:hidden"
-					initial={{ opacity: 0, scale: 0 }}
-					whileInView={{ opacity: 1, scale: 1 }}
-					transition={{
-						duration: 1,
-						type: "spring",
-					}}
+					variants={imageAnimation}
+					initial="initial"
+					whileInView="enter"
 					viewport={{ once: true }}>
 					<Image
 						src={spring}
 						alt="spring-hero-img"
-						width={800}
+						width={400}
 						height={400}
 					/>
 				</motion.div>

@@ -5,22 +5,26 @@ import { pricingItems } from "@/constants";
 import { check, checkwhite } from "@/public";
 
 export default function Pricing() {
+	const phares = ["Pricing"];
+	const phares1 = [
+		"Free forever. Upgrade for unlimited tasks, better",
+		"security, and exclusive features.",
+	];
 	return (
 		<div className="w-full padding-x py-20 bg-white xm:py-10 sm:py-10">
-			<div className="w-full flex flex-col gap-20 xm:gap-10 sm:gap-10">
+			<div className="w-full flex flex-col gap-10">
 				<div className="w-full flex items-center flex-col gap-3">
 					<div>
 						<Heading
-							classname="text-[60px]"
-							title="Pricing"
+							classname="heading font-bold"
+							title={phares}
 						/>
 					</div>
 					<div>
-						<p className="text-[#010D3E] text-center font-dmSans text-xl font-normal leading-tight">
-							Free forever. Upgrade for unlimited tasks, better{" "}
-							<br className="xm:hidden sm:hidden" /> security, and exclusive
-							features.
-						</p>
+						<Heading
+							classname="paragraph text-center"
+							title={phares1}
+						/>
 					</div>
 				</div>
 				<div className="w-full flex justify-center items-end gap-10 xm:flex-col sm:flex-col">
